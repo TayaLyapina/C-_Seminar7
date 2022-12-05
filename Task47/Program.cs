@@ -19,7 +19,7 @@ void FillMatrixRandomNumbers(double[,] array)
     {
         for(int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().NextDouble() * 100;
+            array[i, j] = Math.Round(new Random().NextDouble() * 10, 2);
         }
     }
 }
