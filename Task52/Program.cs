@@ -16,15 +16,19 @@ WriteMatrix(numbers);
 
 Console.Write("Среднее арифметическое каждого столбца: ");
 
+double average = 0;
+
 for(int j = 0; j < numbers.GetLength(1); j++)
     {
-        int sumColumn = 0;
+        double sumColumn = 0;
         for(int i = 0; i < numbers.GetLength(0); i++)
         {
             sumColumn = sumColumn + numbers[i, j];
             
         }
-        Console.Write($"{sumColumn} ");
+
+        average = Math.Round(sumColumn / rows, 3);
+        Console.Write($"{average} ");
         
     }
 
